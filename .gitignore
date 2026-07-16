@@ -1,0 +1,16 @@
+node_modules
+dist
+build
+coverage
+data
+*.log
+.DS_Store
+.env
+.env.local
+.env.*.local
+test-results
+playwright-report
+playwright/.cache
+.pnpm-store
+.vscode
+.idea
