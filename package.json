@@ -1,0 +1,25 @@
+{
+  "name": "kaotu-suji",
+  "version": "0.1.0",
+  "private": true,
+  "description": "考途速记 - AI 驱动的可溯源、可复习、可打印记忆卡片系统",
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "pnpm -r --parallel --stream run dev",
+    "build": "pnpm -r run build",
+    "test": "pnpm -r run test",
+    "lint": "pnpm -r run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "typecheck": "pnpm -r run typecheck",
+    "db:push": "pnpm --filter @kaotu/server run db:push",
+    "db:seed": "pnpm --filter @kaotu/server run db:seed",
+    "e2e": "pnpm --filter @kaotu/web run e2e"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3"
+  }
+}

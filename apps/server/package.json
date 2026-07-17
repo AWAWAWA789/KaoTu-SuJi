@@ -1,0 +1,45 @@
+{
+  "name": "@kaotu/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "lint": "eslint src --ext .ts",
+    "db:push": "tsx src/db/push.ts",
+    "db:seed": "tsx src/db/seed.ts",
+    "db:migrate": "tsx src/db/migrate.ts"
+  },
+  "dependencies": {
+    "@kaotu/shared": "workspace:*",
+    "@hono/node-server": "^1.13.7",
+    "@hono/trpc-server": "^0.3.4",
+    "@trpc/server": "^11.0.0",
+    "better-sqlite3": "^11.3.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.33.0",
+    "hono": "^4.6.6",
+    "ioredis": "^5.4.1",
+    "jose": "^5.9.4",
+    "mysql2": "^3.11.3",
+    "nanoid": "^5.0.7",
+    "nodemailer": "^6.9.15",
+    "playwright-core": "^1.48.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^20.14.0",
+    "@types/nodemailer": "^6.4.16",
+    "drizzle-kit": "^0.24.2",
+    "eslint": "^9.10.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.1"
+  }
+}
